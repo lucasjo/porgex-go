@@ -1,0 +1,7 @@
+# porgex sample config
+[mongo]
+host = master.openpaas.co.kr
+port = 27017
+username = porgex
+password = porgex@123
+databasename = porgex_master
