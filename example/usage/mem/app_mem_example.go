@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	dirpath := "/cgroup/memory/openshift"
+	//dirpath := "/cgroup/memory/openshift"
 	id := "55ee3a460f5106ab680000ca"
 
 	//searchDir := filepath.Join(dirpath, "/", id)
