@@ -55,7 +55,7 @@ func GetAppMemory(uuid string) (MemoryData, error) {
 		return MemoryData{}, fmt.Errorf("failed to parse %s - %v\n", limit, err)
 	}
 
-	mData.limit = limitValue
+	mData.Limit = limitValue
 
 	return mData, nil
 
