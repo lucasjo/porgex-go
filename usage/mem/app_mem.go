@@ -12,13 +12,15 @@ type MemoryData struct {
 	Usage    uint64
 }
 
-var openshiftCgroupsMemName = "/cgroup/memory/openshift/"
+var openshiftCgroupsMemName = "/cgroup/memory/openshift"
 
 func GetAppMemory(uuid string) (MemoryData, error) {
 
 	var mData MemoryData
 
 	moduleName := "memory"
+
+	openshiftCgroupsMemName = strings.Join([]string{openshiftCgroupsMemName, uuid}, "/")
 
 	usage := strings.Join([]string{moduleName, "usage_in_bytes"}, ".")
 	maxUsage := strings.Join([]string{moduleName, "max_usage_in_bytes"}, ".")
